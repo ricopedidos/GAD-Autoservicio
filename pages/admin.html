@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Consulta local de productos y precios de GAD.">
+	<meta name="theme-color" content="#217a55">
+	<title>Catálogo local | GAD</title>
+	<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/responsive.css">
+	<link rel="stylesheet" href="../css/admin.css">
+	<script type="module" src="../js/admin.js"></script>
+</head>
+<body class="admin-page">
+	<a class="skip-link" href="#contenido">Ir al contenido</a>
+	<header class="admin-header"><div class="wrap admin-header-inner">
+		<a class="brand" href="../index.html" aria-label="GAD, inicio"><img src="../assets/logo.svg" width="48" height="48" alt=""><span class="brand-copy"><strong data-business-name>GAD</strong><span>AUTOSERVICIO</span></span></a>
+		<div class="admin-header-actions"><a class="underlined-link" href="../productos.html">Ver tienda <span aria-hidden="true">↗</span></a><a class="cart-link" href="../carrito.html" aria-label="Ir al carrito"><span class="cart-icon" aria-hidden="true">🛒</span><span class="cart-count" data-cart-count aria-live="polite">0</span></a></div>
+	</div></header>
+	<main class="wrap admin-content" id="contenido">
+		<div class="admin-title-row">
+			<div><p class="eyebrow">CATÁLOGO LOCAL</p><h1>Productos de GAD</h1><p>Datos enlazados por el código de barras de cada producto.</p></div>
+			<div class="admin-summary"><div><span>Productos cargados</span><strong data-admin-count>0</strong></div></div>
+		</div>
+		<p class="admin-warning"><strong>Edición manual de datos</strong>Esta página es de solo lectura. Para cambiar productos o precios, editá <code>productos.json</code>, <code>precios_minoristas.json</code> o <code>precios_mayoristas.json</code> en la raíz del proyecto y volvé a publicar el sitio.</p>
+		<section class="admin-panel" aria-labelledby="admin-list-title">
+			<div class="admin-toolbar admin-toolbar--readonly">
+				<div class="admin-field"><label for="admin-search">Buscar producto o código de barras</label><input id="admin-search" type="search" data-admin-search placeholder="Nombre o código"></div>
+			</div>
+			<h2 id="admin-list-title">Productos y precios</h2>
+			<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th scope="col">Producto</th><th scope="col">Código de barras</th><th scope="col">Minorista</th><th scope="col">Mayorista</th></tr></thead><tbody data-admin-products></tbody></table></div>
+			<p class="admin-feedback" data-admin-feedback role="status" aria-live="polite"></p>
+		</section>
+	</main>
+	<footer class="admin-footer"><div class="wrap"><span data-business-name>GAD</span> · Catálogo leído desde archivos JSON locales.</div></footer>
+</body>
+</html>
